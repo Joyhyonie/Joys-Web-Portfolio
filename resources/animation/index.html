@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ghost cursor - CodePenChallenge</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <!--
+
+Follow me on
+Dribbble: https://dribbble.com/supahfunk
+Twitter: https://twitter.com/supahfunk
+Codepen: https://codepen.io/supah/
+
+-->
+
+<div id="ghost" class="ghost">
+  <div class="ghost__head">
+    <div class="ghost__eyes"></div>
+    <div class="ghost__mouth"></div>
+  </div>
+  <div class="ghost__tail">
+    <div class="ghost__rip"></div>
+  </div>
+</div>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur
+        in="SourceGraphic"
+        stdDeviation="10"
+        result="ghost-blur" />
+      <feColorMatrix
+        in="ghost-blur"
+        mode="matrix"
+        values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 16 -7"
+        result="ghost-gooey" />
+    </filter>
+  </defs>
+</svg>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
