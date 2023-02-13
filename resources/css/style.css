@@ -2,12 +2,13 @@
 
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 header {
     font-family: 'Chakra Petch', sans-serif;
     color : #403434; 
-    line-height: 1.5; /* 글씨에 대한 여백 */
+    line-height: 1.5; /* 문단에 대한 여백 */
     padding-bottom: 0.5%;
 }
 
@@ -23,7 +24,7 @@ contents {
     display: flex;
     position: fixed;
     justify-content: space-between;
-    background-color: rgb(255, 255, 255, 0.8);
+    background-color: rgb(255, 255, 255, 0.0);
     width: 100%;
     height: 75px;
     margin: 0 auto;
@@ -93,7 +94,7 @@ contents {
     width: 200px;
     height: 200px;
     border-radius: 70%;
-    background: #CCD6A6;
+    background: #F4C1B1;
     position:absolute;
     text-align: center;
     top: 180px;
@@ -120,7 +121,7 @@ contents {
 .comm {
     list-style : none;
     margin: 5px;
-    background: #DAE2B6;
+    background: #D3756B;
     padding : 7px;
     border-radius: 10px;
     box-shadow:3px 3px 2px 1px rgb(200, 195, 195);
@@ -128,7 +129,7 @@ contents {
 }
 
 .comm:hover {
-    background: #bbc498;
+    background: #ff8d81;
     transform: scale(1.1);
 }
 
@@ -187,7 +188,7 @@ contents {
 
 .menu li {
     display: grid;
-    background: #E7EFC2;
+    background: #D3756B;
     text-align: center;
 }
 
@@ -202,16 +203,15 @@ contents {
 }
 
 .menu a:hover {
-    color: #595e46;
-    box-shadow: 1px 1px #CCD6A6, 2px 2px #CCD6A6, 3px 3px #CCD6A6;
+    background: #ff8d81;
+    box-shadow: 1px 1px #9f5951, 2px 2px #9f5951, 3px 3px #9f5951;
     transform: translateX(-3px);
 }
 
-@keyframes menuBeat
-{
-    0% { transform: scale( 1.1 ); }
-    50% { transform: scale( 0.9 ); }
-    100% { transform: scale( 1.1 ); }
+.container .menu li.is_on .btn { /* 눌린 메뉴 버튼 */
+    background: #ff8d81;
+    box-shadow: 1px 1px #9f5951, 2px 2px #9f5951, 3px 3px #9f5951;
+    transform: translateX(-3px);
 }
 
 /* About Me */
@@ -233,15 +233,15 @@ section {
     justify-content: center;
     margin: 40px;
     padding-bottom: 30px;
-    font-size: 25px;
+    font-size: 22px;
     word-spacing : 2px;
     line-height: 150%;
-    border-bottom: 5px solid #CCD6A6;
+    border-bottom: 5px solid #D3756B;
 }
 
-.introduction .worker {
+.worker {
     margin-right: -5%;
-    margin-top: 30%;
+    margin-top: 7%;
     width: 300px;
     height: 300px;
 }
@@ -249,7 +249,7 @@ section {
 .experience h1 {
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 900;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 50px;
     font-size: 50px;
     text-align: right;
@@ -265,9 +265,25 @@ section {
     margin-right: 5%;
     padding-bottom: 30px;
     list-style: none;
-    border-bottom: 5px solid #CCD6A6;
+    border-bottom: 5px solid #D3756B;
 }
 
 .timeline h3 {
     padding: 1%;
 }
+
+.timeline p {
+    line-height: 1.5;
+}
+
+/* Tech I Use */
+#tech-i-use div {
+    border-style:none;
+	box-shadow:5px 5px 3px 2px gray;
+    padding: 100px;
+    border-radius: 10%;
+}
+
+
+
+
