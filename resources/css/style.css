@@ -17,17 +17,38 @@ contents {
     color : #403434;
 }
 
-/* cousor */
+/* Contact Me */
+#email {
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+    position: fixed; 
+    background: #D3756B;
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    padding : 20px;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+#email:hover {
+    background: #ff8d81;
+    box-shadow: 1px 1px #9f5951, 2px 2px #9f5951, 3px 3px #9f5951;
+    transform: translateX(-3px);
+    transition: all 0.2s ease-in-out;
+}
 
 /* Top-Bar */
 #main-bar {
     display: flex;
     position: fixed;
     justify-content: space-between;
-    background-color: rgb(255, 255, 255, 0.0);
     width: 100%;
-    height: 75px;
+    height: 0px;
     margin: 0 auto;
+    padding-top: 7px;
 }
 
 .main {
@@ -42,7 +63,6 @@ contents {
 }
 
 .like-box {
-    
     position: relative;
 };
 
@@ -77,7 +97,6 @@ contents {
 }
 
 /* Header */
-
 .wrapper {
     max-width: 900px; /* 최대 너비 */
     margin: 0 auto; /* margin: 0 auto : 화면 사이즈를 줄여도 계속 가운데에 있도록 */
@@ -159,7 +178,7 @@ contents {
 #intro {
     font-size: 19px;
     margin-bottom: 15px;
-    font-weight: 100;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .badge {
@@ -175,11 +194,30 @@ contents {
     cursor: pointer;
 }
 
+.badge:hover {
+    background-color: white;
+}
+
 /* Contents */
 .container {
     max-width: 900px;
     margin: 0 auto; 
 }
+
+#menuTab.fixMenuTab { /* 스크롤 이벤트(스크롤 내릴 시 메뉴 상단에 고정) */
+    position: fixed;
+    top: 0;
+    animation: dropMenuTab 0.7s;
+  }
+  
+  @keyframes dropMenuTab {
+    0% {
+      top: -5rem;
+    }
+    100% {
+      top: 0;
+    }
+  }
 
 .menu {
     display : flex;
@@ -197,7 +235,7 @@ contents {
     text-decoration: none;
     display: block;
     font-size: 38px;
-    padding: 7px 82px;
+    padding: 5px 82px;
     color: #FFFFFF;
     transition: all 0.2s ease-in-out;
 }
@@ -220,7 +258,7 @@ section {
     margin: 0 auto;
 }
 
-.introduction h1 {
+#about-me h1 {
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 900;
     margin-top: 40px;
@@ -247,11 +285,8 @@ section {
 }
 
 .experience h1 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-weight: 900;
     margin-top: 20px;
     margin-left: 50px;
-    font-size: 50px;
     text-align: right;
     margin-right: 5%;
 }
@@ -274,6 +309,10 @@ section {
 
 .timeline p {
     line-height: 1.5;
+}
+
+.certi {
+    
 }
 
 /* Tech I Use */

@@ -14,8 +14,8 @@
     
 </head>
 <body id="home">
-    <!-- send Email -->
-    <p><a href="mailto:cho970129@gmail.com" title="send Email">contact me!</a></p>
+    <!-- Contact Me -->
+    <div ><a href="mailto:cho970129@gmail.com" id="email" title="send Email">Contact Me ✉</a></div>
 
     <!-- Top-Bar -->
     <div id="main-bar" class="bar">
@@ -25,9 +25,15 @@
             </a>
         </h1>
         <h1 class="like-box">
-            <img class="like empty" src="../resources/image/empty-heart.png">
-            <img class="like full" src="../resources/image/full-heart.png">
+            <img id="empty-heart" class="like empty" src="../resources/image/empty-heart.png">
+            <img onclick="heart()" id="full-heart" class="like full" src="../resources/image/full-heart.png">
         </h1>
+        <script>
+            // 하트 표시
+            function heart() {
+                document.getElementById('empty-heart').src = document.getElementById('full-heart').src;
+            }
+        </script>
     </div>
 
     <!-- Header -->
@@ -73,17 +79,19 @@
     <!-- Contents -->
     <contents>
         <div class="container">
-            <ul class="menu">
-                <li class="is_on">
-                    <a href="#about-me" class="btn"><span>About Me</span></a>
-                </li>
-                <li>
-                    <a href="#tech-i-use" class="btn"><span>Tech I Use</span></a>
-                </li>
-                <li>
-                    <a href="#projects" class="btn"><span>Projects</span></a>
-                </li>
-            </ul>
+            <div id="menuTab">
+                <ul class="menu">
+                    <li class="is_on">
+                        <a href="#about-me" class="btn"><span>About Me</span></a>
+                    </li>
+                    <li>
+                        <a href="#tech-i-use" class="btn"><span>Tech I Use</span></a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="btn"><span>Projects</span></a>
+                    </li>
+                </ul>
+            </div>
             
             <section class="allContents">
                 <!-- About me -->
@@ -127,7 +135,7 @@
                     </div>
             
                     <div class="certification">
-                        <h1>Education & Experience</h1>
+                        <h1>Certification</h1>
                         <ul class="certi">
                             <li>Information Processing Engineer</li>
                             <li>SQLD(Structured Query Language Developer)</li>
@@ -160,9 +168,10 @@
         </div> 
 
         <script>
+            /* 탭 메뉴 구현 */
             const tabList = document.querySelectorAll('.container .menu li');
             const contents = document.querySelectorAll('.container .allContents .cont')
-            let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
+            let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본으로 #about 활성화)
           
             for(var i = 0; i < tabList.length; i++){
               tabList[i].querySelector('.btn').addEventListener('click', function(e){
@@ -183,7 +192,22 @@
                 document.querySelector(activeCont).style.display = 'block';
               });
             }
+
+            /* 스크롤 이벤트 구현 (메뉴 상단에 고정) */
+            let $menuTab = document.getElementById("menuTab");
+            let sticky = $menuTab.offsetTop;
+
+            // 스크롤 시, fixMenuTab() 실행
+            window.onscroll = function fixMenuTab() {
+
+            if (window.pageYOffset > sticky) { // 스크롤 세로값이 헤더높이보다 크거나 같으면 menuTab에 클래스 'fixMenuTab'을 추가
+                menuTab.classList.add("fixMenuTab");
+            } else {
+                menuTab.classList.remove("fixMenuTab");
+            }
+            }
           </script>
+
 
     </contents>
 
