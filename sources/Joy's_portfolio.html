@@ -10,7 +10,8 @@
     <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Lobster&family=Secular+One&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Candal&family=Chakra+Petch:wght@700&family=Lobster&family=Secular+One&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     
 </head>
 <body id="home">
@@ -43,7 +44,7 @@
                 <iframe id="ghost" src="../resources/animation/index.html"></iframe>
             </div>
             <image class="profile" src="../resources/image/joy_main.jpg"></image>
-            <div class="back">blank</div>
+            <div class="backCircle"></div>
             <nav>
             <ul class="comm-button">
                 <li class="comm">
@@ -66,7 +67,7 @@
             <div class="info">
                 <h1 id="name">Hyoyeon Cho</h1>
                 <p id="motto">Tiny little habits make me ✨</p>
-                <p id="intro">Hi ! I'm a back-end developer who is able to communicate super well !</p>
+                <p id="intro">Hi ! I'm a web developer who is able to communicate super well !</p>
                 <span class="badge">hard worker 🦾</span>
                 <span class="badge">open-eared  👂</span>
                 <span class="badge">independent 🌱</span>
@@ -99,7 +100,7 @@
                     <div class="introduction">
                         <h1>Get to know me</h1>
                         <div class="sentence">
-                            <p> My name is Hyoyeon Cho, I’m a back-end developer based in Seoul, Korea.<br>
+                            <p> My name is Hyoyeon Cho, I’m a web developer based in Seoul, Korea.<br>
                                 I have developed lots of types of back-ends from well know applications to 
                                 Ecommerce booking platforms.<br>
                                 I also like sharing content related to the stuff that I have learned over the 
@@ -129,89 +130,125 @@
                             <li><h3>2023. 7 - present</h3>
                                 <p>Working as a back-end developer in Kurly<br>
                                 (Web applications, Chatbot, Scrapping tool and API integration)</p>
-                                
                             </li>
                         </ul>
                     </div>
             
                     <div class="certification">
                         <h1>Certification</h1>
-                        <ul class="certi">
-                            <li>Information Processing Engineer</li>
-                            <li>SQLD(Structured Query Language Developer)</li>
-                            <li>Ielts(each 8)</li>
-                            <li>OPIC(AL)</li>
-                        </ul>
+                        <div class="card card1">
+                            <div class="front"><img src="../resources/image/certi.png"></div>
+                            <div class="back">Information Processing Engineer<p>15 Nov 2023</p></div>
+                        </div>
+                        <div class="card card2">
+                            <div class="front"><img src="../resources/image/certi.png"></div>
+                            <div class="back">Structured Query Language Developer<p>7 Jul 2023</p></div>
+                        </div>
+                        <div class="card card3">
+                            <div class="front"><img src="../resources/image/certi.png"></div>
+                            <div class="back">Ielts<br>(each 8)<p>13 Jan 2025</p></div>
+                        </div>
+                        <div class="card card4">
+                            <div class="front"><img src="../resources/image/certi.png"></div>
+                            <div class="back">OPIC<br>(AL)<p>29 May 2024</p></div>  
+                        </div>
                     </div>
                 </article>
 
                 <!-- Tech I Use -->
                 <article id="tech-i-use" class="cont">
-                    <h3>Here are a few technologies I’ve been working with recently</h3><br>
-                    <div id="language">
-                        <p>Programing Language</p>
+                    <h3>Here are a few technologies I’ve been working with recently 🔧</h3><br>
+                    <p>Programing Language</p>
+                    <div id="lang">
+                        <a href="#"><span>Java</span></a>
+                        <a href="#"><span>JavaScript</span></a>
+                        <a href="#"><span>TypeScript</span></a>
+                        <a href="#"><span>HTML</span></a>
+                        <a href="#"><span>CSS</span></a>
+                        <a href="#"><span>MySQL</span></a>
                     </div>
+                    <p>Libraries & Frameworks</p>
                     <div id="lib">
-                        <p>Libraries & Frameworks & API</p>
+                        <a href="#"><span>jQeury</span></a>
+                        <a href="#"><span>React.js</span></a>
+                        <a href="#"><span>Vue.js</span></a>
+                        <a href="#"><span>Node.js</span></a>
+                        <a href="#"><span>Spring</span></a>
+                        <a href="#"><span>Spring Boot</span></a>
                     </div>
+                    <p>Tools & Platforms</p>
                     <div id="tool">
-                        <p>Tools & Platforms</p>
+                        <img id="" src="../resources/image/tech_git.svg">
+                        <img id="" src="../resources/image/tech_github.svg">
+                        <img id="" src="../resources/image/tech_eclipse.svg">
+                        <img id="" src="../resources/image/tech_intellij.svg">
+                        <img id="" src="../resources/image/tech_vscode.svg">
+                        <img id="" src="../resources/image/tech_sqldev.svg">
                     </div>
                 </article>
+
+                <script>
+                </script>
             
                 <!-- Projects -->
                 <article id="projects" class="cont">
-                    
+            
                     
                 </article>
             </section>
         </div> 
+    </contents>
+    <footer>
+        <div>Joy's portfolio</div>
+    </footer>
 
-        <script>
-            /* 탭 메뉴 구현 */
-            const tabList = document.querySelectorAll('.container .menu li');
-            const contents = document.querySelectorAll('.container .allContents .cont')
-            let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본으로 #about 활성화)
-          
-            for(var i = 0; i < tabList.length; i++){
-              tabList[i].querySelector('.btn').addEventListener('click', function(e){
-                e.preventDefault();
-                for(var j = 0; j < tabList.length; j++){
-                  // 나머지 버튼 클래스 제거
-                  tabList[j].classList.remove('is_on');
-          
-                  // 나머지 컨텐츠 display:none 처리
-                  contents[j].style.display = 'none';
-                }
-          
-                // 버튼 관련 이벤트
-                this.parentNode.classList.add('is_on');
-          
-                // 버튼 클릭시 컨텐츠 전환
-                activeCont = this.getAttribute('href');
-                document.querySelector(activeCont).style.display = 'block';
-              });
+    <script>
+        /* 탭 메뉴 구현 */
+        const tabList = document.querySelectorAll('.container .menu li');
+        const contents = document.querySelectorAll('.container .allContents .cont')
+        let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본으로 #about 활성화)
+      
+        for(var i = 0; i < tabList.length; i++){
+          tabList[i].querySelector('.btn').addEventListener('click', function(e){
+            e.preventDefault();
+            for(var j = 0; j < tabList.length; j++){
+              // 나머지 버튼 클래스 제거
+              tabList[j].classList.remove('is_on');
+      
+              // 나머지 컨텐츠 display:none 처리
+              contents[j].style.display = 'none';
             }
+      
+            // 버튼 관련 이벤트
+            this.parentNode.classList.add('is_on');
+      
+            // 버튼 클릭시 컨텐츠 전환
+            activeCont = this.getAttribute('href');
+            document.querySelector(activeCont).style.display = 'block';
+          });
+        }
 
-            /* 스크롤 이벤트 구현 (메뉴 상단에 고정) */
-            let $menuTab = document.getElementById("menuTab");
-            let sticky = $menuTab.offsetTop;
+        /* 스크롤 이벤트 구현 (메뉴 상단에 고정) */
+        let $menuTab = document.getElementById("menuTab");
+        let menuTabHeight = $menuTab.offsetTop; // menuTab의 높이
 
-            // 스크롤 시, fixMenuTab() 실행
-            window.onscroll = function fixMenuTab() {
-
-            if (window.pageYOffset > sticky) { // 스크롤 세로값이 헤더높이보다 크거나 같으면 menuTab에 클래스 'fixMenuTab'을 추가
+        // 스크롤 시, fixMenuTab() 실행
+        window.onscroll = function fixMenuTab() {
+        
+            // 스크롤 세로값이 menuTab높이보다 크면 menuTab에 클래스 'fixMenuTab'을 추가
+            if (window.pageYOffset > menuTabHeight) { 
                 menuTab.classList.add("fixMenuTab");
             } else {
-                menuTab.classList.remove("fixMenuTab");
+                menuTab.classList.remove("fixMenuTab"); // 아닐 경우, 제거하여 원래 자리에 고정
             }
-            }
-          </script>
+        }
 
-
-    </contents>
-
-    
+        /* Certi 마우스 오버 이벤트 구현 (jQuery 사용) */
+        $(".card").hover(function(){
+            $(".cardRotate").addClass("backRotate").removeClass("cardRotate");
+            $(this).addClass("cardRotate").removeClass("backRotate");
+        });
+      </script>
 
 </body>
 </html>
