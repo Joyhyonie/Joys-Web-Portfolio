@@ -23,19 +23,19 @@ contents {
     bottom: 0;
     margin: 20px;
     position: fixed; 
-    background: #F0997D;
+    background: #FFD76F;
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-size: 25px;
     font-weight: bolder;
-    padding : 20px;
+    padding : 10px 20px;
     border-radius: 40px;
     text-decoration: none;
 }
 
 #email:hover {
-    background: #F4C1B1;
-    box-shadow: 1px 1px #F0997D, 2px 2px #F0997D, 3px 3px #F0997D;
+    background: #FFEAB2;
+    box-shadow: 1px 1px #FFCA3E, 2px 2px #FFCA3E, 3px 3px #FFCA3E;
     transform: translateX(-3px);
     transition: all 0.2s ease-in-out;
 }
@@ -114,7 +114,7 @@ contents {
     width: 200px;
     height: 200px;
     border-radius: 70%;
-    background: #F4C1B1;
+    background: #D3F6F3;
     position:absolute;
     text-align: center;
     top: 180px;
@@ -141,7 +141,7 @@ contents {
 .comm {
     list-style : none;
     margin: 5px;
-    background: #F0997D;
+    background: #FFD76F;
     padding : 7px;
     border-radius: 10px;
     box-shadow:3px 3px 2px 1px rgb(200, 195, 195);
@@ -149,7 +149,7 @@ contents {
 }
 
 .comm:hover {
-    background: #fec4b1;
+    background: #FFEAB2;
     transform: scale(1.1);
 }
 
@@ -174,7 +174,7 @@ contents {
     letter-spacing: 1.5px; /* 글자 간 간격 */
     margin: 20px;
     margin-left: 0%;
-    border-left: 10px solid #F0997D;
+    border-left: 10px solid #FFD76F;
     padding-left: 10px;
 }
 
@@ -230,7 +230,7 @@ contents {
 
 .menu li {
     display: grid;
-    background: #FFF0EB;
+    background: #FFEAB2;
     text-align: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -242,21 +242,23 @@ contents {
     display: block;
     font-size: 38px;
     padding: 5px 82px;
-    color: #F0997D;
+    color: #ffffff;
     transition: all 0.2s ease-in-out;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
 .menu a:hover {
+    color: #FFD464;
     background: #ffffff;
-    box-shadow: 1px 1px #F0997D, 2px 2px #F0997D, 3px 3px #F0997D;
+    box-shadow: 1px 1px #FFCA3E, 2px 2px #FFCA3E, 3px 3px #FFCA3E;
     transform: translateX(-5px);
 }
 
 .container .menu li.is_on .btn { /* 눌린 메뉴 버튼 */
+    color: #FFD464;
     background: #ffffff;
-    box-shadow: 1px 1px #F0997D, 2px 2px #F0997D, 3px 3px #F0997D;
+    box-shadow: 1px 1px #FFCA3E, 2px 2px #FFCA3E, 3px 3px #FFCA3E;
     transform: translateX(-3px);
 }
 
@@ -272,7 +274,7 @@ section {
     margin-top: 40px;
     margin-left: 50px;
     font-size: 50px;
-    border-left: 20px solid #F0997D;
+    border-left: 20px solid #FFF1CC;
     padding-left: 20px;
 }
 
@@ -284,7 +286,7 @@ section {
     font-size: 22px;
     word-spacing : 2px;
     line-height: 150%;
-    border-bottom: 5px solid #D3756B;
+    border-bottom: 5px solid #FFCA3E;
 }
 
 .worker {
@@ -309,7 +311,7 @@ section {
     margin-right: 5%;
     padding-bottom: 30px;
     list-style: none;
-    border-bottom: 5px solid #D3756B;
+    border-bottom: 5px solid #FFCA3E;
 }
 
 .timeline h3 {
@@ -340,7 +342,7 @@ section {
     position:absolute; 
     width:180px; 
     height:250px; 
-    background:#FFF0EB; 
+    background:#FFF1CC; 
     border-radius: 20px;
     padding-top: 60px;
     box-shadow:5px 5px 3px 2px lightgray;
@@ -355,7 +357,7 @@ section {
     width: 180px; 
     height: 250px; 
     background:rgb(255, 255, 255); 
-    border: 3px solid #F0997D;
+    border: 6px solid #D3F6F3;
     border-width: 5px;
     transform:rotateY(90deg);
     border-radius: 20px;
@@ -367,7 +369,7 @@ section {
 .back p {
     font-size: 20px;
     padding-top: 30px;
-    color:#D3756B;
+    color:#FFCA3E;
 }
 
 .cardRotate .front {
@@ -438,30 +440,32 @@ section {
 #tech-i-use h3 {
     margin: 40px;
     font-size: 27px;
-    border-bottom: 5px solid #F0997D;
+    border-bottom: 5px solid #FFCA3E;
     padding-bottom: 5px;
 }
   
   /* Icons */
   #tech-i-use img {
-    width: 90px;
-    height: 90px;
+    width: 95px;
+    height: 95px;
+    
   }
 
   #tech-i-use a {
     background-color: white;
-    border-radius:4px;
-    text-align:center;
+    border-radius: 4px;
+    text-align: center;
     text-decoration:none;
     position: relative;
     display: inline-block;
-    padding:12px;
-    /* margin:0 2px; */
+    padding: 7px;
+    margin: 10px;
     transition: all .5s;
+    border-radius: 20px;
   }
   
   #tech-i-use a:hover {
-    background: #f2a990;
+    background: #D3F6F3;
     cursor: pointer;
   }
   
@@ -477,7 +481,7 @@ section {
     font-size:23px;
     font-weight: bold;
     border-radius:5px;
-    background:#F4C1B1;
+    background:#ace0db;
     visibility:hidden;
     opacity:0;
     transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -561,7 +565,7 @@ section {
 footer {
     width: 100%;
     height: 50px;
-    background-color: #F4C1B1;
+    background-color: #FFD76F;
     color: white;
     text-align: center;
     font-family: 'Lobster', cursive;
