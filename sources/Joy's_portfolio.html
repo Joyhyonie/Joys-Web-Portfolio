@@ -15,6 +15,7 @@
     
 </head>
 <body id="home">
+
     <!-- Contact Me -->
     <div ><a href="mailto:cho970129@gmail.com" id="email" title="send Email">Contact Me ✉</a></div>
 
@@ -23,6 +24,7 @@
         <h1>
             <a href="#home">
                 <img class="main" src="../resources/image/joy_smile.png" alt="Main">
+                <div id="move">Click me to go to the top</div>
             </a>
         </h1>
         <h1 class="like-box">
@@ -93,7 +95,7 @@
                     </li>
                 </ul>
             </div>
-            
+
             <section class="allContents">
                 <!-- About me -->
                 <article id="about-me" class="cont">
@@ -122,7 +124,7 @@
                             </li>
                             <li><h3>2019. 11 - 2022. 10</h3>
                                 <p>Completed a language training course in Greenwich College</p>
-                                <p>Worked as a chef in Australia.</p>
+                                <p>Worked as a chef in Australia</p>
                             </li>
                             <li><h3>2022. 12 - 2023. 6</h3>
                                 <p>Completed a programming course in Hi-Media Academy</p>
@@ -155,6 +157,14 @@
                     </div>
                 </article>
 
+                <script>
+                    /* Certi 마우스 오버 이벤트 구현 (jQuery 사용) */
+                    $(".card").hover(function(){
+                        $(".cardRotate").addClass("backRotate").removeClass("cardRotate");
+                        $(this).addClass("cardRotate").removeClass("backRotate");
+                    });
+                </script>
+
                 <!-- Tech I Use -->
                 <article id="tech-i-use" class="cont">
                     <h3>Here are a few technologies I’ve been working with recently 🔧</h3><br>
@@ -186,9 +196,6 @@
                         <a><img src="../resources/image/tech_sqldev.png"><span>SQL Developer</span></a>
                     </div>
                 </article>
-
-                <script>
-                </script>
             
                 <!-- Projects -->
                 <article id="projects" class="cont">
@@ -222,8 +229,9 @@
             </section>
         </div> 
     </contents>
+
     <footer>
-        <div>Joy's portfolio</div>
+        <div>Copyright 2023. Joyhyonie All rights reserved.</div>
     </footer>
 
     <script>
@@ -231,7 +239,7 @@
         const tabList = document.querySelectorAll('.container .menu li');
         const contents = document.querySelectorAll('.container .allContents .cont')
         let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본으로 #about-me 활성화)
-      
+    
         for(var i = 0; i < tabList.length; i++){
             tabList[i].querySelector('.btn').addEventListener('click', function(e){
             e.preventDefault();
@@ -242,14 +250,14 @@
                 // 나머지 컨텐츠 display:none 처리
                 contents[j].style.display = 'none';
             }
-      
+    
             // 버튼 관련 이벤트
             this.parentNode.classList.add('is_on');
-      
+    
             // 버튼 클릭시 컨텐츠 전환
             activeCont = this.getAttribute('href');
             document.querySelector(activeCont).style.display = 'block';
-          });
+        });
         }
 
         /* 스크롤 이벤트 구현 (메뉴탭 상단에 고정) */
@@ -266,13 +274,7 @@
                 menuTab.classList.remove("fixMenuTab"); // 아닐 경우, 제거하여 원래 자리에 고정
             }
         }
-
-        /* Certi 마우스 오버 이벤트 구현 (jQuery 사용) */
-        $(".card").hover(function(){
-            $(".cardRotate").addClass("backRotate").removeClass("cardRotate");
-            $(this).addClass("cardRotate").removeClass("backRotate");
-        });
-      </script>
+        </script>
 
 </body>
 </html>
