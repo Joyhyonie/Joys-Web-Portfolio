@@ -39,7 +39,7 @@
 
     <!-- Header -->
     <header>
-        <div class="wrapper">
+        <div class="wrap">
             <div class="banner">
                 <iframe id="ghost" src="../resources/animation/index.html"></iframe>
             </div>
@@ -160,30 +160,30 @@
                     <h3>Here are a few technologies I’ve been working with recently 🔧</h3><br>
                     <p>Programing Language</p>
                     <div id="lang">
-                        <a href="#"><span>Java</span></a>
-                        <a href="#"><span>JavaScript</span></a>
-                        <a href="#"><span>TypeScript</span></a>
-                        <a href="#"><span>HTML</span></a>
-                        <a href="#"><span>CSS</span></a>
-                        <a href="#"><span>MySQL</span></a>
+                        <a><img src="../resources/image/tech_java.png"><span>Java</span></a>
+                        <a><img src="../resources/image/tech_js.png"><span>JavaScript</span></a>
+                        <a><img src="../resources/image/tech_ts.png"><span>TypeScript</span></a>
+                        <a><img src="../resources/image/tech_html.png"><span>HTML</span></a>
+                        <a><img src="../resources/image/tech_css.png"><span>CSS</span></a>
+                        <a><img src="../resources/image/tech_mysql.png"><span>MySQL</span></a>
                     </div>
                     <p>Libraries & Frameworks</p>
                     <div id="lib">
-                        <a href="#"><span>jQeury</span></a>
-                        <a href="#"><span>React.js</span></a>
-                        <a href="#"><span>Vue.js</span></a>
-                        <a href="#"><span>Node.js</span></a>
-                        <a href="#"><span>Spring</span></a>
-                        <a href="#"><span>Spring Boot</span></a>
+                        <a><img src="../resources/image/tech_jquery.png"><span>jQeury</span></a>
+                        <a><img src="../resources/image/tech_react.png"><span>React.js</span></a>
+                        <a><img src="../resources/image/tech_vuejs.png"><span>Vue.js</span></a>
+                        <a><img src="../resources/image/tech_nodejs.png"><span>Node.js</span></a>
+                        <a><img src="../resources/image/tech_spring.png"><span>Spring</span></a>
+                        <a><img src="../resources/image/tech_springboot.png"><span>Spring Boot</span></a>
                     </div>
                     <p>Tools & Platforms</p>
                     <div id="tool">
-                        <img id="" src="../resources/image/tech_git.svg">
-                        <img id="" src="../resources/image/tech_github.svg">
-                        <img id="" src="../resources/image/tech_eclipse.svg">
-                        <img id="" src="../resources/image/tech_intellij.svg">
-                        <img id="" src="../resources/image/tech_vscode.svg">
-                        <img id="" src="../resources/image/tech_sqldev.svg">
+                        <a><img src="../resources/image/tech_git.png"><span>Git</span></a>
+                        <a><img src="../resources/image/tech_github.png"><span>GitHub</span></a>
+                        <a><img src="../resources/image/tech_eclipse.png"><span>Eclipse</span></a>
+                        <a><img src="../resources/image/tech_intellij.png"><span>IntelliJ</span></a>
+                        <a><img src="../resources/image/tech_vscode.png"><span>Visual Studio Code</span></a>
+                        <a><img src="../resources/image/tech_sqldev.png"><span>SQL Developer</span></a>
                     </div>
                 </article>
 
@@ -192,8 +192,32 @@
             
                 <!-- Projects -->
                 <article id="projects" class="cont">
-            
-                    
+                <div class="cover" >
+                    <div class="project">
+                        <img src="../resources/image/projects_1.png">
+                        <h3>Veet</h3><br>
+                        <p>Wep application for getting a mentor</p><br>
+                        <a href="https://www.joinveet.com/" title="Veet" target="_blank">more detail</a>
+                    </div>
+                    <div class="project">
+                        <img src="../resources/image/projects_2.png">
+                        <h3>SPASORA</h3><br>
+                        <p>Wep application for booking an accmodation </p><br>
+                        <a href="https://spasora.netlify.app/" title="SPASORA" target="_blank">more detail</a>
+                    </div>
+                    <div class="project">
+                        <img src="../resources/image/projects_3.png">
+                        <h3>BossBus</h3><br>
+                        <p>Wep application for transportation reservation</p><br>
+                        <a href="https://bossbusworld.com/" title="BossBus" target="_blank">more detail</a>
+                    </div>
+                    <div class="project">
+                        <img src="../resources/image/projects_4.png">
+                        <h3>Flexicreate</h3><br>
+                        <p>Wep application for product promotion</p><br>
+                        <a href="https://flexicreate.com/index.html" title="Flexicreate" target="_blank">more detail</a>
+                    </div>
+                </div>
                 </article>
             </section>
         </div> 
@@ -206,17 +230,17 @@
         /* 탭 메뉴 구현 */
         const tabList = document.querySelectorAll('.container .menu li');
         const contents = document.querySelectorAll('.container .allContents .cont')
-        let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본으로 #about 활성화)
+        let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본으로 #about-me 활성화)
       
         for(var i = 0; i < tabList.length; i++){
-          tabList[i].querySelector('.btn').addEventListener('click', function(e){
+            tabList[i].querySelector('.btn').addEventListener('click', function(e){
             e.preventDefault();
             for(var j = 0; j < tabList.length; j++){
-              // 나머지 버튼 클래스 제거
-              tabList[j].classList.remove('is_on');
-      
-              // 나머지 컨텐츠 display:none 처리
-              contents[j].style.display = 'none';
+                // 나머지 버튼 클래스 제거
+                tabList[j].classList.remove('is_on');
+        
+                // 나머지 컨텐츠 display:none 처리
+                contents[j].style.display = 'none';
             }
       
             // 버튼 관련 이벤트
@@ -228,7 +252,7 @@
           });
         }
 
-        /* 스크롤 이벤트 구현 (메뉴 상단에 고정) */
+        /* 스크롤 이벤트 구현 (메뉴탭 상단에 고정) */
         let $menuTab = document.getElementById("menuTab");
         let menuTabHeight = $menuTab.offsetTop; // menuTab의 높이
 

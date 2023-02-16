@@ -97,7 +97,7 @@ contents {
 }
 
 /* Header */
-.wrapper {
+.wrap {
     max-width: 900px; /* 최대 너비 */
     margin: 0 auto; /* margin: 0 auto : 화면 사이즈를 줄여도 계속 가운데에 있도록 */
     position: relative;
@@ -211,6 +211,7 @@ contents {
     position: fixed;
     top: 0;
     animation: dropMenuTab 0.7s;
+    z-index: 1;
   }
   
   @keyframes dropMenuTab {
@@ -231,8 +232,8 @@ contents {
     display: grid;
     background: #FFF0EB;
     text-align: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .menu a {
@@ -243,8 +244,8 @@ contents {
     padding: 5px 82px;
     color: #F0997D;
     transition: all 0.2s ease-in-out;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .menu a:hover {
@@ -284,7 +285,6 @@ section {
     word-spacing : 2px;
     line-height: 150%;
     border-bottom: 5px solid #D3756B;
-
 }
 
 .worker {
@@ -334,7 +334,6 @@ section {
     margin-left: 32px;
     margin-bottom: 100px;
     text-align: center;
-    
 }
 
 .front {
@@ -356,9 +355,8 @@ section {
     width: 180px; 
     height: 250px; 
     background:rgb(255, 255, 255); 
-    border-style: dotted;
+    border: 3px solid #F0997D;
     border-width: 5px;
-    border-color: #F0997D;
     transform:rotateY(90deg);
     border-radius: 20px;
     box-shadow: 5px 5px 3px 2px lightgray;
@@ -409,6 +407,10 @@ section {
 }
 
 /* Tech I Use */
+#tech-i-use {
+    display: none; /* 첫 메인 화면에 나오지 않도록 */
+}
+
 #tech-i-use div {
     border-style:none;
 	box-shadow:5px 5px 3px 2px lightgray;
@@ -439,59 +441,31 @@ section {
     border-bottom: 5px solid #F0997D;
     padding-bottom: 5px;
 }
-
-#tech-i-use img {
-    width: 95px;
-    padding-top: 10px;
-    margin: 15px;
-}
-
-/* footer */
-footer {
-    width: 100%;
-    height: 50px;
-    background-color: #F4C1B1;
-    color: white;
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    font-size: 30px;
-}
-
-/*---------------------------------------------*/
-
-#lang div {
-    display: inline-block;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-  }
   
   /* Icons */
-  
+  #tech-i-use img {
+    width: 90px;
+    height: 90px;
+  }
+
   #tech-i-use a {
-    color:#fff;
-    /* background: #DB6E82; */
+    background-color: white;
     border-radius:4px;
     text-align:center;
     text-decoration:none;
-    font-family:fontawesome;
     position: relative;
     display: inline-block;
-    width:px;
-    height:px;
-    padding-top:12px;
-    margin:0 2px;
+    padding:12px;
+    /* margin:0 2px; */
     transition: all .5s;
   }
   
   #tech-i-use a:hover {
-    background: #FFF0EB;
+    background: #f2a990;
+    cursor: pointer;
   }
   
-  /* pop-up text */
-  
-  #tech-i-use a span {
+  #tech-i-use a span {/* tech 미니 팝업창 */
     color:#ffffff;
     position:absolute;
     font-family: 'Ubuntu', sans-serif;
@@ -509,59 +483,87 @@ footer {
     transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
-  /* text pops up when icon is in hover state */
-  
   #tech-i-use a:hover span {
-    bottom:130px;
+    bottom:120px;
     visibility:visible;
     opacity:1;
   }
 
-  /* font awesome icons */
+/* Projects */
+#projects {
+    display: none; /* 첫 메인 화면에 나오지 않도록 */
+}
 
-    #lang a:nth-of-type(1):before {
-    content: url(../image/tech_java.svg);
-    margin: 10px;
-    }
-    #lang a:nth-of-type(2):before {
-    content: url(../image/tech_js.svg);
-    margin: 10px;
-    }
-    #lang a:nth-of-type(3):before {
-    content: url(../image/tech_ts.svg);
-    margin: 10px;
-    }
-    #lang a:nth-of-type(4):before {
-    content: url(../image/tech_html.svg);
-    margin: 10px;
-    }
-    #lang a:nth-of-type(5):before {
-    content: url(../image/tech_css.svg);
-    margin: 10px;
-    }
-    #lang a:nth-of-type(6):before {
-    content:url(../image/tech_mysql.svg);
-    margin: 10px;
-    }
-
-    /* #lib a:nth-of-type(1):before {
-    content: url(../image/tech_jquery.svg);
+.cover {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 50px;
     margin: 50px;
-    }
-    #lib a:nth-of-type(2):before {
-    content: url(../image/tech_react.svg);
-    }
-    #lib a:nth-of-type(3):before {
-    content: url(../image/tech_vuejs.svg);
-    }
-    #lib a:nth-of-type(4):before {
-    content: url(../image/tech_nodejs.svg);
-    }
-    #lib a:nth-of-type(5):before {
-    content: url(../image/tech_spring.svg);
-    }
-    #lib a:nth-of-type(6):before {
-    content:url(../image/tech_springboot.svg);
-    } */
+    place-items: center; /* grid의 가운데 정렬 */
+}
 
+.project {
+    position: relative;
+    background: #F2EFEF;
+    width: 400px;
+    height: 460px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px; /* 최대 너비 */
+    text-align: center;
+}
 
+#projects img {
+    width: 350px;
+    height: 200px;
+    border-radius: 20px;
+
+}
+
+#projects h3 {
+    font-family: 'Secular One', sans-serif;
+    text-align: left;
+    font-weight: 900;
+    font-size: 45px;
+    padding: 0;
+}
+
+#projects p {
+    text-align: left;
+    top: 0;
+    font-size: 27px;
+    font-weight: lighter;
+}
+
+#projects a {
+    margin-left: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    background: #f2a990;
+    border-radius: 20px;
+    padding: 10px 20px;
+    position: absolute; /* a 태그를 div를 기준으로 고정 */
+    top: 390px;
+    left: 170px;
+}
+
+#projects a:hover {
+    background: #ffffff;
+
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #F4C1B1;
+    color: white;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
