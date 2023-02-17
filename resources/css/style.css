@@ -160,7 +160,7 @@ contents {
 .comm-button {
     display: flex;
     position: absolute;
-    margin-left: 670px;iframe
+    margin-left: 670px;
 }
 
 .comm {
@@ -369,7 +369,7 @@ section {
 }
 
 .front img {
-    width: 100px;
+    width: 120px;
 }
 
 .back {
@@ -489,7 +489,7 @@ section {
     cursor: pointer;
   }
   
-  #tech-i-use a span {/* tech 미니 팝업창 */
+  #tech-i-use a span { /* tech 미니 팝업창 */
     color:#ffffff;
     position:absolute;
     font-family: 'Ubuntu', sans-serif;
